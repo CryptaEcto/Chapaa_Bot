@@ -1,3 +1,9 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
+
 import discord
 from discord.ext import commands
 
@@ -70,5 +76,5 @@ class PartyJoinButtons(discord.ui.View):
         active_party_message = None
 
 # Run the bot with your token
-bot.run("YOUR_BOT_TOKEN")
+bot.run(TOKEN)
 
